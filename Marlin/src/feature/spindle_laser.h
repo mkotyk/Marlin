@@ -92,6 +92,7 @@ public:
 
   static bool isReady;                    // Ready to apply power setting from the UI to OCR
   static uint8_t power;
+  static bool forward;
 
   #if ENABLED(MARLIN_DEV_MODE)
     static cutter_frequency_t frequency;  // Set PWM frequency; range: 2K-50K
@@ -190,7 +191,7 @@ public:
     #endif
   }
 
-  #if ENABLED(SPINDLE_CHANGE_DIR)
+  #if #if ENABLED(SPINDLE_CHANGE_DIR) || (defined(SPINDLE_FWD_PIN) && defined(SPINDLE_REV_PIN))
     static void set_direction(const bool reverse);
   #else
     static inline void set_direction(const bool) {}
