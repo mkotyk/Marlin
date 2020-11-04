@@ -39,7 +39,10 @@
 //
 // Servos
 //
-#define SERVO0_PIN                         P2_00
+//#define SERVO0_PIN                         P2_00
+#define SPINDLE_LASER_PWM_PIN              P2_00 // Spindle PWM is connected to SERVO0
+#define SPINDLE_FWD_PIN                     P1_26
+#define SPINDLE_REV_PIN                     P1_25
 
 //
 // TMC StallGuard DIAG pins
