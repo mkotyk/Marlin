@@ -191,7 +191,7 @@ public:
     #endif
   }
 
-  #if #if ENABLED(SPINDLE_CHANGE_DIR) || (defined(SPINDLE_FWD_PIN) && defined(SPINDLE_REV_PIN))
+  #if ENABLED(SPINDLE_CHANGE_DIR) || (defined(SPINDLE_FWD_PIN) && defined(SPINDLE_REV_PIN))
     static void set_direction(const bool reverse);
   #else
     static inline void set_direction(const bool) {}
