@@ -427,6 +427,8 @@ private:
   #if ENABLED(FWRETRACT)
     static void G10();
     static void G11();
+  #elif ENABLED(CNC_COORDINATE_SYSTEMS)
+    static void G10();
   #endif
 
   TERN_(NOZZLE_CLEAN_FEATURE, static void G12());

@@ -280,6 +280,8 @@ void GcodeSuite::process_parsed_command(const bool no_ok/*=false*/) {
       #if ENABLED(FWRETRACT)
         case 10: G10(); break;                                    // G10: Retract / Swap Retract
         case 11: G11(); break;                                    // G11: Recover / Swap Recover
+      #elif ENABLED(CNC_COORDINATE_SYSTEMS)
+        case 10: G10(); break;                                    // G10: Set coordinate system
       #endif
 
       #if ENABLED(NOZZLE_CLEAN_FEATURE)
